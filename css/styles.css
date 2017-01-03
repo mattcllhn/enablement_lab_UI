@@ -186,5 +186,5 @@ border-bottom:1px solid #ddd;
 }
 #plans table tr td{
   border-top:1px solid #ddd;
-  padding:10px 0 0
+  padding:10px 0 10px 0;
 }
