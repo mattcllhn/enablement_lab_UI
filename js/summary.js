@@ -4,7 +4,7 @@
  */
 function getPolicy() {
     var policyJson = sessionStorage.policy;
-    var policy = $.parseJSON(policyJson);	
+    var policy = $.parseJSON(policyJson);
     var username = GetURLParameter('username');
     var policyid = GetURLParameter('policyid');
     // note this uses jquery syntax instead of regular Javascript syntax to build the html tags
@@ -22,4 +22,4 @@ function getPolicy() {
     /**
      * Add a button that prints
      */
-};
+}
