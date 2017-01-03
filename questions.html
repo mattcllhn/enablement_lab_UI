@@ -10,65 +10,55 @@
 <script type="text/javascript" src="./js/common.js"></script>
 <script type="text/javascript" src="./js/questions.js"></script>
 
-<p>Questionnaire</p>
-
-<form class="form" id="customerform" action="#" method="POST">
 <input type="hidden" name="username" />
 <input type="hidden" name="policyid" />
-<table>
-  <tr>
-   <td>
-   <p>How many times a year do you visit the doctor?</p>
-   </td>
-  </tr>
-  <tr>
-    <td>
-    <input type="radio" name="doctorvisits" value="1">1</input> 
-    <input type="radio" name="doctorvisits" value="2-4">2-4</input> 
-    <input type="radio" name="doctorvisits" value="5+">5+</input>
-    </td>
-  </tr>
-  <tr>
-   <td>
-   <p>How many prescriptions do you currently have?</p>
-   </td>
-  </tr>
-  <tr>
-    <td>
-    <input type="radio" name="prescriptions" value="0">0</input> 
-    <input type="radio" name="prescriptions" value="2-4">1-5</input> 
-    <input type="radio" name="prescriptions" value="5+">6+</input>
-    </td>
-  </tr>
-  <tr>
-   <td>
-   <p>Do you plan to use a Health Savings Account (HSA)?</p>
-   </td>
-  </tr>
-  <tr>
-    <td>
-    <input type="radio" name="hsa" value="true">Yes</input> 
-    <input type="radio" name="hsa" value="false">No</input> 
-    </td>
-  </tr>
-  <tr>
-   <td>
-   <p>Do you prefer to pay lower premiums and pay out of pocket when you need to or higer premiums with lower co-pay?</p>
-   </td>
-  </tr>
-  <tr>
-    <td>
-    <input type="radio" name="premiums" value="high">Higher</input> 
-    <input type="radio" name="premiums" value="low">Lower</input> 
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <input type="button" name="submit" value="Continue" id="sendQuestions"/>
-    </td>
-  </tr>
-</table>
-</form>
 
+
+<div class="header-wrapper">
+  <img class="logo" src="images/AwesomeInc_Logo.svg" />
+</div>
+
+<div id="pre-registration" class="page-wrapper" >
+  <h1>Step 3: Questionnaire</h1>
+  <form class="form" id="questionform" action="#" method="POST">
+    <fieldset>
+      <legend>Additional Information</legend>
+        <div class="form-item">
+          <p>How many times a year do you visit the doctor?</p>
+          <label class = "radio-label" for="visit1">1</label>
+          <input type="radio" id="visit1" value="1" />
+          <label class = "radio-label" for="visit2">2-4</label>
+          <input type="radio" id="visit2" value="2-4" />
+          <label class = "radio-label" for="visit3">5+</label>
+          <input type="radio" id="visit3" value="5+" />
+        </div>
+        <div class="form-item">
+          <p>How many prescriptions do you currently have?</p>
+          <label class = "radio-label" for="pres1">1</label>
+          <input type="radio" id="pres1" value="1" />
+          <label class = "radio-label" for="pres2">2-5</label>
+          <input type="radio" id="pres2" value="2-5" />
+          <label class = "radio-label" for="pres3">6+</label>
+          <input type="radio" id="pres3" value="6+" />
+        </div>
+        <div class="form-item">
+          <p>Do you plan to use a Health Savings Account (HSA)??</p>
+          <label class = "radio-label" for="hsa1">Yes</label>
+          <input type="radio" id="hsa1" value="yes" />
+          <label class = "radio-label" for="hsa2">No</label>
+          <input type="radio" id="hsa2" value="no" />
+        </div>
+        <div class="form-item">
+          <p>Do you prefer to pay lower premiums and pay out of pocket when you need to or higer premiums with lower co-pay?</p>
+          <label class = "radio-label" for="prem1">Higher</label>
+          <input type="radio" id="prem1" value="high" />
+          <label class = "radio-label" for="prem2">Lower</label>
+          <input type="radio" id="prem2" value="low" />
+        </div>
+      </fieldset>
+      <input type="button" name="submit" value="Continue" id="sendQuestions"/>
+
+    </form>
+  </div>
 </body>
 </html>
