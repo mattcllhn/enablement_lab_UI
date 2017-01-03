@@ -141,17 +141,33 @@ li li {margin:.5rem 0;}
 .hidden{
   display:none;
 }
+
 #dependentsLabel{
   width:80%;
 }
+
 .radio-label{
   display: inline;
   font-weight: 600;
-  margin-right: 0;
+  margin-left: 0;
   width: 100%;
   text-align: left;
-  margin-left: 2rem;
+  margin-right: 2rem;
 }
 #questionform .form-item{
   width:57%;
+}
+#questionform {
+  text-align:left;
+  counter-reset: question-counter;
+}
+#questionform .question{
+  counter-increment: question-counter;
+}
+#questionform .question:before{
+  content:counter(question-counter)'.  ';
+}
+
+#questionform .form-item input{
+  margin-left:25px;
 }

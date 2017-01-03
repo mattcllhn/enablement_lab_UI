@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="./css/styles.css" rel="stylesheet">
 <title>Questionnaire</title>
 </head>
@@ -22,38 +23,40 @@
   <h1>Step 3: Questionnaire</h1>
   <form class="form" id="questionform" action="#" method="POST">
     <fieldset>
-      <legend>Additional Information</legend>
+      <legend>Medical Information</legend>
         <div class="form-item">
-          <p>How many times a year do you visit the doctor?</p>
-          <label class = "radio-label" for="visit1">1</label>
+          <p class = "question">How many times a year do you visit the doctor?</p>
           <input type="radio" id="visit1" value="1" />
-          <label class = "radio-label" for="visit2">2-4</label>
+          <label class = "radio-label" for="visit1">1</label>
           <input type="radio" id="visit2" value="2-4" />
-          <label class = "radio-label" for="visit3">5+</label>
+          <label class = "radio-label" for="visit2">2-4</label>
           <input type="radio" id="visit3" value="5+" />
+          <label class = "radio-label" for="visit3">5+</label>
+
         </div>
         <div class="form-item">
-          <p>How many prescriptions do you currently have?</p>
-          <label class = "radio-label" for="pres1">1</label>
+          <p class = "question">How many prescriptions do you currently have?</p>
           <input type="radio" id="pres1" value="1" />
-          <label class = "radio-label" for="pres2">2-5</label>
+          <label class = "radio-label" for="pres1">1</label>
           <input type="radio" id="pres2" value="2-5" />
-          <label class = "radio-label" for="pres3">6+</label>
+          <label class = "radio-label" for="pres2">2-5</label>
           <input type="radio" id="pres3" value="6+" />
+          <label class = "radio-label" for="pres3">6+</label>
+
         </div>
         <div class="form-item">
-          <p>Do you plan to use a Health Savings Account (HSA)??</p>
-          <label class = "radio-label" for="hsa1">Yes</label>
+          <p class = "question">Do you plan to use a Health Savings Account (HSA)??</p>
           <input type="radio" id="hsa1" value="yes" />
-          <label class = "radio-label" for="hsa2">No</label>
+          <label class = "radio-label" for="hsa1">Yes</label>
           <input type="radio" id="hsa2" value="no" />
+          <label class = "radio-label" for="hsa2">No</label>
         </div>
         <div class="form-item">
-          <p>Do you prefer to pay lower premiums and pay out of pocket when you need to or higer premiums with lower co-pay?</p>
-          <label class = "radio-label" for="prem1">Higher</label>
+          <p class = "question">Do you prefer to pay lower premiums and pay out of pocket when you need to or higer premiums with lower co-pay?</p>
           <input type="radio" id="prem1" value="high" />
-          <label class = "radio-label" for="prem2">Lower</label>
+          <label class = "radio-label" for="prem1">Higher</label>
           <input type="radio" id="prem2" value="low" />
+          <label class = "radio-label" for="prem2">Lower</label>
         </div>
       </fieldset>
       <input type="button" name="submit" value="Continue" id="sendQuestions"/>

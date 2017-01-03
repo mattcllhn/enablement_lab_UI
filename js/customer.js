@@ -16,7 +16,7 @@
  * @returns
  */
 
-function addCustomers() {
+function addDependents() {
 var dependentArray = [];
 
 var count = $('#dependents').val();
@@ -44,76 +44,13 @@ for (var i = 0; i < count; i++) {
 	$('#outputDiv').html(dependentArray);
 }//for loop
 
-
-
-	// var form = document.getElementById('customerform');
-	// var customers = document.getElementById("customers");
-	// var count = form['dependents'].value;
-	// while (customers.hasChildNodes()) {
-	// 	customers.removeChild(customers.lastChild);
-  //   }
-	// for (i=0; i < count; i++) {
-	//
-	// 	var txtnode = document.createTextNode('Dependent ' + (i + 1));
-	// 	var newc = {'first':null,'last':null,'birthdate':null,'gender':null,'ssn':null,'headOfHousehold':false}
-	// 	var firstlabel = document.createTextNode('First: ');
-	// 	var first = document.createElement("input");
-	// 	var lastlabel = document.createTextNode('Last: ');
-	// 	var last = document.createElement("input");
-	// 	var bdlabel = document.createTextNode('Birth Date: ');
-	// 	var birthdate = document.createElement("input");
-	// 	var dateformat = document.createTextNode(' yyyy-mm-dd');
-	// 	var ssnlabel = document.createTextNode('SSN: ');
-	// 	var ssn = document.createElement("input");
-	// 	var genderlabel = document.createTextNode('Gender: ');
-	// 	var gender = document.createElement("select");
-	// 	var male = document.createElement("option");
-	// 	male.value = 'Male';
-	// 	male.appendChild(document.createTextNode('Male'));
-	// 	var female = document.createElement("option");
-	// 	female.value = 'Female';
-	// 	female.appendChild(document.createTextNode('Female'));
-	// 	gender.appendChild(male);
-	// 	gender.appendChild(female);
-	// 	first.type = 'text';
-	// 	first.name = 'first' + i;
-	// 	last.type = 'text';
-	// 	last.name = 'last' + i;
-	// 	birthdate.type = 'text';
-	// 	birthdate.name = 'birthdate' + i;
-	// 	ssn.type = 'text';
-	// 	ssn.name = 'ssn' + i;
-	// 	gender.name = 'gender' + i;
-	//
-	// 	customers.appendChild(txtnode);
-	// 	customers.appendChild(document.createElement("br"));
-	// 	customers.appendChild(firstlabel);
-	// 	customers.appendChild(first);
-	// 	customers.appendChild(document.createElement("br"));
-	// 	customers.appendChild(lastlabel);
-	// 	customers.appendChild(last);
-	// 	customers.appendChild(document.createElement("br"));
-	// 	customers.appendChild(bdlabel);
-	// 	customers.appendChild(birthdate);
-	// 	customers.appendChild(dateformat);
-	// 	customers.appendChild(document.createElement("br"));
-	// 	customers.appendChild(ssnlabel);
-	// 	customers.appendChild(ssn);
-	// 	customers.appendChild(document.createElement("br"));
-	// 	customers.appendChild(genderlabel);
-	// 	customers.appendChild(gender);
-	// 	customers.appendChild(document.createElement("br"));
-	// 	customers.appendChild(document.createElement("br"));
-	// }
 }//addCustomers
 
 $(document).ready(function() {
   $('#dependents').change(function() {
-    addCustomers();
-  });
-});
+    addDependents();
+  });//dependents on change
 
-$(document).ready(function(){
   $("#saveCustomer").click(
     function(){
       var sponsor = GetURLParameter('code');
@@ -170,6 +107,6 @@ $(document).ready(function(){
             	  alert(rspJson.status);
             	}
               }
-            );
+            );//ajax
     });
-});
+});//docready
