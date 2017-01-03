@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Awesome, Inc | Health Insurance Enrollment</title>
+  <link href="./css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="header-wrapper">
+    <img class="logo" src="images/AwesomeInc_Logo.svg" />
+  </div>
+  <div id="pre-registration" class="page-wrapper" >
+    <h1>Step 1: Basic Information</h1>
+    <form class="form" id="regform" action="#" method="POST">
+      <div class="form-item">
+        <label for="name">Name:</label> 
+        <input id="name" name="name" value="" type="text" />
+      </div>
+      <div class="form-item">
+        <label for="emailAddress">Email Address:</label>
+        <input id="emailAddress" name="emailAddress" value="" type="text" />
+      </div>
+      <div class="form-item">
+        <label for="password">Password:</label>
+        <input id="password" name="password" value="" type="password" />
+      </div>
+      <div class="form-item">
+        <label for="code">Registration Code:</label>
+        <input id="code" name="code" value="" type="text" />
+      </div>
+      <div class="form-item">
+        <label for="username">Username:</label>
+        <input id="username" name="username" value="" type="text" />
+      </div>
+      <div class="form-item">
+        <input type="button" name="cancel" id="cancel" class="btn-secondary" value="Cancel" />
+        <input type="submit" name="register" id="register" value="Continue" />
+      </div>
+    </form>
+  </div>
+  <script src="./jquery/jquery.js"></script>
+  <script type="text/javascript" src="./js/register.js"></script>
+</body>
+</html>

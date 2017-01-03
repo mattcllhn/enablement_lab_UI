@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="./css/styles.css" rel="stylesheet">
+<title>Questionnaire</title>
+</head>
+<body onload="getUser()">
+<script src="./jquery/jquery.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/questions.js"></script>
+
+<p>Questionnaire</p>
+
+<form class="form" id="customerform" action="#" method="POST">
+<input type="hidden" name="username" />
+<input type="hidden" name="policyid" />
+<table>
+  <tr>
+   <td>
+   <p>How many times a year do you visit the doctor?</p>
+   </td>
+  </tr>
+  <tr>
+    <td>
+    <input type="radio" name="doctorvisits" value="1">1</input> 
+    <input type="radio" name="doctorvisits" value="2-4">2-4</input> 
+    <input type="radio" name="doctorvisits" value="5+">5+</input>
+    </td>
+  </tr>
+  <tr>
+   <td>
+   <p>How many prescriptions do you currently have?</p>
+   </td>
+  </tr>
+  <tr>
+    <td>
+    <input type="radio" name="prescriptions" value="0">0</input> 
+    <input type="radio" name="prescriptions" value="2-4">1-5</input> 
+    <input type="radio" name="prescriptions" value="5+">6+</input>
+    </td>
+  </tr>
+  <tr>
+   <td>
+   <p>Do you plan to use a Health Savings Account (HSA)?</p>
+   </td>
+  </tr>
+  <tr>
+    <td>
+    <input type="radio" name="hsa" value="true">Yes</input> 
+    <input type="radio" name="hsa" value="false">No</input> 
+    </td>
+  </tr>
+  <tr>
+   <td>
+   <p>Do you prefer to pay lower premiums and pay out of pocket when you need to or higer premiums with lower co-pay?</p>
+   </td>
+  </tr>
+  <tr>
+    <td>
+    <input type="radio" name="premiums" value="high">Higher</input> 
+    <input type="radio" name="premiums" value="low">Lower</input> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" name="submit" value="Continue" id="sendQuestions"/>
+    </td>
+  </tr>
+</table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* Awesome, Inc | Enrollment App Styles */
+* {box-sizing: border-box;}
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+html {
+  font-size:16px;
+  font-family:"Open Sans", Arial, sans-serif;
+  color:#333;
+  margin:0px;
+  padding:0px;
+  background-color:#888;}
+
+body {
+  margin:0px;
+  padding:0px;
+  border-top:10px solid #3950a2;
+  background-color:#fff;
+  min-height:100vh;
+}
+
+.page-wrapper {
+  max-width:800px;
+  margin:0 auto;
+  padding:3rem 1rem;
+}
+
+.header-wrapper {
+  text-align:center;
+  padding-top:30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {margin:2rem 0;}
+
+form {
+  text-align:center;
+}
+
+fieldset {
+  border:none;
+  border-top:2px solid #ddd;
+  margin-top:2rem;
+  padding-top:2rem;
+}
+legend {
+  color:#3950a2;
+  text-transform: uppercase;
+  padding:0px 1rem;
+}
+
+.form-item {
+  margin:1rem auto;
+  clear:both;
+}
+
+label {
+  display:inline-block;
+  font-weight:600;
+  margin-right:1rem;
+  width:160px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: .5rem;
+  font-size: 1rem;
+  width:300px;
+  border-radius:4px;
+  border:1px solid #ddd;
+}
+.input-spacer {width:300px;display:inline-block;text-align: left;}
+
+.logo {max-width:300px;}
+
+button,
+input[type="submit"],
+input[type="button"]{
+  background-color:#3950a2;
+  color:#fff;
+  padding:.5rem 1rem;
+  border-radius: 4px;
+  border:none;
+  font-size:1rem;
+  font-weight:300;
+  text-transform: uppercase;
+  cursor:pointer;
+  margin:2rem .5rem;
+  clear:both;
+  display:inline-block;
+}
+
+input.btn-secondary,
+button.btn-secondary {
+  background-color: #666;}
+
+.checklist-wrapper {
+  clear:both;
+  width:100%;
+  display:table-row;
+  margin:2rem 0;}
+
+.checklist-icon {
+  font-size:8rem;
+  color:#3950a2;
+  background:#ddd;
+  text-align: center;
+  width: 170px;
+  display:table-cell;
+  height:100%;
+  vertical-align: middle;
+  padding-left: 1rem;
+
+}
+
+.checklist-list {
+  border:solid 2px #ddd;
+  padding:1.5rem 2rem;
+  width:calc(100% - 170px);
+  margin:0;
+  display:table-cell;
+  list-style-position: inside;
+}
+
+.button-wrapper {text-align:center;}
+
+li {margin-bottom:1rem;}
+li li {margin:.5rem 0;}
+
+.hidden{
+  display:none;
+}
+#dependentsLabel{
+  width:80%;
+}
