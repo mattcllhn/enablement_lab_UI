@@ -172,3 +172,19 @@ li li {margin:.5rem 0;}
 #questionform .form-item input{
   margin-left:25px;
 }
+/* Summary Page / ID Card Styles */
+.id-card {max-width:320px;margin:40px auto;border:1px solid #ddd;border-radius:12px;padding:20px 20px 15px;}
+.id-card-logo {max-width:200px; margin:0 auto 20px;}
+.id-card-patient-info p, .id-card-plan-info p {margin:0 0 5px;font-size:.75rem;}
+.id-card-patient-info {border-bottom:1px solid #dedede;margin-bottom:10px; padding-bottom:5px;}
+.font-b {font-weight:600;}
+
+#plans table{
+width:100%;
+border-bottom:1px solid #ddd;
+
+}
+#plans table tr td{
+  border-top:1px solid #ddd;
+  padding:10px 0 0
+}

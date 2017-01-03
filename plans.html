@@ -11,33 +11,58 @@
 <script type="text/javascript" src="./js/questions.js"></script>
 <script type="text/javascript" src="./js/plans.js"></script>
 
-<p>Plan Choices</p>
-
+<div class="header-wrapper">
+  <img class="logo" src="images/AwesomeInc_Logo.svg" />
+</div>
+<div id="pre-registration" class="page-wrapper" >
+  <h1>Plan Choices</h1>
 <form class="form" id="selectform" action="#" method="POST">
-
-      <p></p>
+  <fieldset>
+  <legend>Select Your Plan</legend>
+  </fieldset>
       <div id="plans">
         <table>
-          <td>
-              <tr>
-                hello
-              </tr>
-              <tr>
-                world
-              </tr>
-          </td>
-          <td>
-              <tr>
-                hello again
-              </tr>
-              <tr>
-                world
-              </tr>
-          </td>
+            <tr>
+              <th></th>
+              <th>Plan</th>
+              <th colspan="2">Out of Pocket Max</th>
+              <th colspan="2">Deductible</th>
+              <th colspan="2">Premiums</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>individual</th>
+              <th>family</th>
+              <th>individual</th>
+              <th>family</th>
+              <th>individual</th>
+              <th>family</th>
+            </tr>
+            <tr>
+              <td><input type="radio" name="selected" value=""></td>
+              <td>Choice B</td>
+              <td>450</td>
+              <td>1200</td>
+              <td>3000</td>
+              <td>5200</td>
+              <td>498/1104</td>
+              <td>1005/1678</td>
+            </tr>
+            <tr>
+              <td><input type="radio" name="selected" value=""></td>
+              <td>Choice C</td>
+              <td>1500</td>
+              <td>5200</td>
+              <td>3200</td>
+              <td>5200</td>
+              <td>413/1002</td>
+              <td>1215/1545</td>
+            </tr>
         </table>
+        <button type="button" name="button">Make Selection</button>
       </div>
-
 </form>
-
+</div>
 </body>
 </html>

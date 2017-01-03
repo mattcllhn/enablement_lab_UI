@@ -6,26 +6,38 @@
 <title>Enrollment Summary</title>
 </head>
 <body onload="getPolicy()">
+  <div class="header-wrapper">
+    <img class="logo" src="images/AwesomeInc_Logo.svg" />
+  </div>
+  <div id="welcome" class="page-wrapper" >
+    <h1>Congratulations!</h1>
+    <p>You have completed the enrollment process. You should receive your policy documents and ID cards in 7-10 business days.</p>
+    <p>If desired, please print or save a copy of your temporary ID Card below.
+    </p>
+    <div class="id-card-wrapper clearfix">
+      <div class="id-card">
+        <div class="id-card-logo">
+          <img class="logo" src="images/AwesomeInc_Logo.svg" />
+        </div>
+        <div class="id-card-patient-info">
+          <p><span class="font-b">Member Name: </span><span id="member-name">Test Userson</span></p>
+          <p><span class="font-b">Member ID#: </span><span id="member-id">0123456789</span></p>
+
+        </div>
+        <div class="id-card-plan-info">
+          <p><span class="font-b">Payer ID: </span><span id="member-payer-id">23789</span></p>
+          <p><span class="font-b">Group/Policy: </span><span id="member-group">Concord, Inc</span></p>
+          <p><span class="font-b">Coverage Type: </span><span id="member-coverage">PPO</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <button id="printCard">Print My Card</button>
+    </div>
+  </div>
 <script src="./jquery/jquery.js"></script>
 <script type="text/javascript" src="./js/common.js"></script>
 <script type="text/javascript" src="./js/plans.js"></script>
 <script type="text/javascript" src="./js/summary.js"></script>
-
-<div class="header-wrapper">
-  <img class="logo" src="images/AwesomeInc_Logo.svg" />
-</div>
-<div id="pre-registration" class="page-wrapper" >
-  <h1>Enrollment Summary</h1>
-
-
-<table>
-  <tr>
-    <td>
-      <div id="policy"/>
-    </td>
-  </tr>
-</table>
-</div>
-
 </body>
 </html>

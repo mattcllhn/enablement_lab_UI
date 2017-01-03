@@ -47,6 +47,7 @@ for (var i = 0; i < count; i++) {
 }//addCustomers
 
 $(document).ready(function() {
+	
   $('#dependents').change(function() {
     addDependents();
   });//dependents on change
