@@ -86,6 +86,7 @@ $(document).ready(function() {
 
 	$("#saveCustomer").click(
 		function(){
+			var username = GetURLParameter('username');
 			var sendInfo = {
 				policyID:null,
 				customers:getCustomers(),
@@ -95,24 +96,24 @@ $(document).ready(function() {
 
 			console.log('sendInfo logged here \n',sendInfo);
 
-			$.ajax(
-			        {
-			          url: "/RestService/Policy/username/" + username,
-			      	type: "POST",
-			      	data: JSON.stringify(sendInfo),
-			      	contentType: 'application/json; charset=utf-8',
-			      	dataType: 'json',
-			      	async: true,
-			      	success: function(jsondata) {
-			      	  sessionStorage.setItem('policy',JSON.stringify(jsondata));
-			      	  // go to the next page to gather the customer data
-			      	  window.location = 'questions.html?username=' + username + '&policyid=' + jsondata.policyID;
-			      	},
-			      	error: function(msg) {
-			      	  var rspJson = $.parseJSON(msg.responseText);
-			      	  alert(rspJson.status);
-			      	}
-			        }
-			      );
+			// $.ajax(
+			//         {
+			//           url: "/RestService/Policy/username/" + username,
+			//       	type: "POST",
+			//       	data: JSON.stringify(sendInfo),
+			//       	contentType: 'application/json; charset=utf-8',
+			//       	dataType: 'json',
+			//       	async: true,
+			//       	success: function(jsondata) {
+			//       	  sessionStorage.setItem('policy',JSON.stringify(jsondata));
+			//       	  // go to the next page to gather the customer data
+			//       	  window.location = 'questions.html?username=' + username + '&policyid=' + jsondata.policyID;
+			//       	},
+			//       	error: function(msg) {
+			//       	  var rspJson = $.parseJSON(msg.responseText);
+			//       	  alert(rspJson.status);
+			//       	}
+			//         }
+			//       );
 		});//saveCustomer onclick
 	});//docready
