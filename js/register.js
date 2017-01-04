@@ -4,42 +4,45 @@
 $(document).ready(function(){
   $("#register").click(
     function(){
-      var form = document.getElementById('regform'); // lookup the HTML element for the form
-      var username = form['username'].value; // get the username input from the form
-      var email = form['emailAddress'].value; // get the emailAddress input from the form
-      var password = form['password'].value; // get the password input from the form
-      var name = form['name'].value; // get the name inpt from the form
-      var rcode = form['code'].value; // get the code input from the form
-      // the JSON data we will send to the server
+      //sets the value of each property by targeting id of input fields and grabbing the value
       var sendInfo = {
-    	      'emailAddress': email,
-    	      'password': password,
-    	      'code': rcode,
-    	      'username': username,
-    	      'name': name
-    	    };
+            emailAddress: $('#emailAddress').val(),
+            password: $('#password').val(),
+            code: $('#code').val(),
+            username: $('#username').val(),
+            name: $('#name').val(),
+            billingAddress: {
+              city:$('#city').val(),
+              line1:$('#line1').val(),
+              line2:$('#line2').val(),
+              name:'billing',
+              postalCode:$('#postalCode').val(),
+              state:$('#state').val()
+            }//billingAddress
+          };//sendInfo
       // Checking for blank fields.
-      if( !email || !password || !rcode){
+      if( !sendInfo.emailAddress || !sendInfo.password || !sendInfo.code){
         alert("Please fill all fields...!!!!!!");
       }else {
-        $.ajax(
-          {
-            url: "/RestService/User/",
-        	type: "POST",
-        	data: JSON.stringify(sendInfo),
-        	contentType: 'application/json; charset=utf-8',
-        	dataType: 'json',
-        	async: true,
-        	success: function(msg) {
-        	  // go to the next page to gather the customer data
-        	  window.location= 'customer.html?username=' +username + '&code=' + rcode;
-        	},
-        	error: function(msg) {
-        	  var rspJson = $.parseJSON(msg.responseText);
-        	  alert(rspJson.status);
-        	}
-          }
-        );
+        console.log('sendInfo logged here:',sendInfo);
+        // $.ajax(
+        //   {
+        //     url: "/RestService/User/",
+        // 	type: "POST",
+        // 	data: JSON.stringify(sendInfo),
+        // 	contentType: 'application/json; charset=utf-8',
+        // 	dataType: 'json',
+        // 	async: true,
+        // 	success: function(msg) {
+        // 	  // go to the next page to gather the customer data
+        // 	  window.location= 'customer.html?username=' +username + '&code=' + rcode;
+        // 	},
+        // 	error: function(msg) {
+        // 	  var rspJson = $.parseJSON(msg.responseText);
+        // 	  alert(rspJson.status);
+        // 	}
+        //   }
+        // );
       }
   });
 });
