@@ -20,42 +20,43 @@ $(document).ready(function(){
 	      var sponsor = GetURLParameter('code');
 	      var username = GetURLParameter('username');
 	      var policyid = GetURLParameter('policyid');
-	      var form = document.getElementById('customerform');
-	      var visits = form['doctorvisits'].value;
-	      var prescriptions = form['prescriptions'].value;
-	      var hsa = form['hsa'].value;
-	      var premiums = form['premiums'].value;
+        var sendInfo = {
+	    	      questions: [
+                {
+                  name:'visits',
+                  answer: $('input[name=question1]:checked').val()
+                },{
+                  name:'prescriptions',
+                  answer: $('input[name=question2]:checked').val()
+                },{
+                  name:'hsa',
+                  answer: $('input[name=question3]:checked').val()
+                },{
+                  name:'premiums',
+                  answer: $('input[name=question4]:checked').val()
+                },
+              ]//questions
+	    	    };//sendInfo
+        console.log('sendInfo',sendInfo);
 
-	      var sendInfo = {
-	    	      'questions': []
-	    	    };
-	      var q1 = {'name':'visits','answer': visits};
-	      var q2 = {'name':'prescriptions','answer': prescriptions};
-	      var q3 = {'name':'hsa','answer':hsa};
-	      var q4 = {'name':'premiums','answer':premiums};
-	      sendInfo.questions.push(q1);
-	      sendInfo.questions.push(q2);
-	      sendInfo.questions.push(q3);
-	      sendInfo.questions.push(q4);
-
-	      $.ajax(
-	              {
-	                url: "/RestService/Question/username/" + username,
-	            	type: "POST",
-	            	data: JSON.stringify(sendInfo),
-	            	contentType: 'application/json; charset=utf-8',
-	            	dataType: 'json',
-	            	async: true,
-	            	success: function(jsondata) {
-	            	  sessionStorage.setItem('plans',JSON.stringify(jsondata));
-	            	  // go to the next page to gather the customer data
-	            	  window.location = 'plans.html?username=' + username + '&policyid=' + policyid;
-	            	},
-	            	error: function(msg) {
-	            	  var rspJson = $.parseJSON(msg.responseText);
-	            	  alert(rspJson.status);
-	            	}
-	              }
-	            );
+	      // $.ajax(
+	      //         {
+	      //           url: "/RestService/Question/username/" + username,
+	      //       	type: "POST",
+	      //       	data: JSON.stringify(sendInfo),
+	      //       	contentType: 'application/json; charset=utf-8',
+	      //       	dataType: 'json',
+	      //       	async: true,
+	      //       	success: function(jsondata) {
+	      //       	  sessionStorage.setItem('plans',JSON.stringify(jsondata));
+	      //       	  // go to the next page to gather the customer data
+	      //       	  window.location = 'plans.html?username=' + username + '&policyid=' + policyid;
+	      //       	},
+	      //       	error: function(msg) {
+	      //       	  var rspJson = $.parseJSON(msg.responseText);
+	      //       	  alert(rspJson.status);
+	      //       	}
+	      //         }
+	      //       );
 	    });
 	});
