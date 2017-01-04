@@ -47,7 +47,7 @@ for (var i = 0; i < count; i++) {
 }//addCustomers
 
 $(document).ready(function() {
-	
+
   $('#dependents').change(function() {
     addDependents();
   });//dependents on change
@@ -88,9 +88,11 @@ $(document).ready(function() {
         var gender = form['gender' + i].value;
         var ct = {'first':first,'last':last,'birthDate':birth,'headOfHousehold':false,'gender':gender,'ssn':ssn};
         sendInfo.customers.push(ct);
+					console.log(sendInfo);
       }
       //alert('save the customer data');
       $.ajax(
+
               {
                 url: "/RestService/Policy/username/" + username,
             	type: "POST",
