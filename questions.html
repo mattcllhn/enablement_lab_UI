@@ -23,39 +23,39 @@
   <h1>Step 3: Questionnaire</h1>
   <form class="form" id="questionform" action="#" method="POST">
     <fieldset>
-      <legend>Medical Information</legend>
+      <legend>Medical Information & Coverage Preferences</legend>
         <div class="form-item">
           <p class = "question">How many times a year do you visit the doctor?</p>
-          <input type="radio" id="visit1" value="1" />
+          <input name="question1" type="radio" id="visit1" value="1" />
           <label class = "radio-label" for="visit1">1</label>
-          <input type="radio" id="visit2" value="2-4" />
+          <input name="question1" type="radio" id="visit2" value="2-4" />
           <label class = "radio-label" for="visit2">2-4</label>
-          <input type="radio" id="visit3" value="5+" />
+          <input  name="question1" type="radio" id="visit3" value="5+" />
           <label class = "radio-label" for="visit3">5+</label>
 
         </div>
         <div class="form-item">
           <p class = "question">How many prescriptions do you currently have?</p>
-          <input type="radio" id="pres1" value="1" />
+          <input name="question2" type="radio" id="pres1" value="1" />
           <label class = "radio-label" for="pres1">1</label>
-          <input type="radio" id="pres2" value="2-5" />
+          <input  name="question2" type="radio" id="pres2" value="2-5" />
           <label class = "radio-label" for="pres2">2-5</label>
-          <input type="radio" id="pres3" value="6+" />
+          <input name="question2" type="radio" id="pres3" value="6+" />
           <label class = "radio-label" for="pres3">6+</label>
 
         </div>
         <div class="form-item">
           <p class = "question">Do you plan to use a Health Savings Account (HSA)??</p>
-          <input type="radio" id="hsa1" value="yes" />
+          <input  name="question3" type="radio" id="hsa1" value="yes" />
           <label class = "radio-label" for="hsa1">Yes</label>
-          <input type="radio" id="hsa2" value="no" />
+          <input  name="question3" type="radio" id="hsa2" value="no" />
           <label class = "radio-label" for="hsa2">No</label>
         </div>
         <div class="form-item">
           <p class = "question">Do you prefer to pay lower premiums and pay out of pocket when you need to or higer premiums with lower co-pay?</p>
-          <input type="radio" id="prem1" value="high" />
+          <input  name="question4" type="radio" id="prem1" value="high" />
           <label class = "radio-label" for="prem1">Higher</label>
-          <input type="radio" id="prem2" value="low" />
+          <input  name="question4" type="radio" id="prem2" value="low" />
           <label class = "radio-label" for="prem2">Lower</label>
         </div>
       </fieldset>

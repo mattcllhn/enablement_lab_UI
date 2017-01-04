@@ -44,50 +44,22 @@
             </select>
           </span>
         </div>
-      </fieldset>
-      <fieldset>
-      <legend>Billing Address</legend>
-        <input type="hidden" name="addrname" value="billing"/>
         <div class="form-item">
-          <label>Street Address:</label>
-          <input type="text" name="line1" value=""/>
-        </div>
-        <div class="form-item">
-          <label>Address Line 2:</label>
-          <input type="text" name="line2" value=""/>
-        </div>
-        <div class="form-item">
-          <label>City:</label>
-          <input type="text" name="city" value=""/>
-        </div>
-        <div class="form-item">
-          <label>State:</label>
-          <input type="text" name="state" value=""/>
-        </div>
-        <div class="form-item">
-          <label>Postal Code:</label>
-          <input type="text" name="postalCode" value=""/>
+          <label for="dependents" id = "dependentsLabel">How many people (other than the employee) will be covered on your plan?</label><select id="dependents" name="dependents" >
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10+</option>
+          </select>
         </div>
       </fieldset>
-
-      <fieldset>
-        <legend>Dependents</legend>
-
-        <label for="dependents" id = "dependentsLabel">How many people (other than the employee) will be covered on your plan?</label><select id="dependents" name="dependents" >
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10+</option>
-        </select>
-
-</fieldset>
 <div id = "outputDiv"></div>
 <fieldset class = "hidden" id="dependentTemplate">
   <legend ></legend>
@@ -113,6 +85,16 @@
       <select  id="dependentgender">
         <option value="Male">Male</option>
         <option value="Female">Female</option>
+      </select>
+    </span>
+  </div>
+  <div class="form-item">
+    <label for="dependentrelationship">Relationship:</label>
+    <span class="input-spacer">
+      <select  id="dependentrelationship">
+        <option value="spouse">Spouse/Partner</option>
+        <option value="child">Child</option>
+        <option value="other">Other Dependant</option>
       </select>
     </span>
   </div>

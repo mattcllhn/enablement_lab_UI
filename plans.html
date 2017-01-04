@@ -16,6 +16,7 @@
 </div>
 <div id="pre-registration" class="page-wrapper" >
   <h1>Plan Choices</h1>
+  <p>Based on the information you have provided about your medical history and payment prefences, we've found these plans recommended for you.  Please select from the options below.</p>
 <form class="form" id="selectform" action="#" method="POST">
   <fieldset>
   <legend>Select Your Plan</legend>
@@ -25,42 +26,43 @@
             <tr>
               <th></th>
               <th>Plan</th>
-              <th colspan="2">Out of Pocket Max</th>
-              <th colspan="2">Deductible</th>
-              <th colspan="2">Premiums</th>
+              <th colspan="2" class="border-left">Out of Pocket Max</th>
+              <th colspan="2" class="border-left">Deductible</th>
+              <th colspan="2" class="border-left">Premiums</th>
             </tr>
-            <tr>
+            <tr class="subheadings">
               <th></th>
               <th></th>
-              <th>individual</th>
-              <th>family</th>
-              <th>individual</th>
-              <th>family</th>
-              <th>individual</th>
-              <th>family</th>
+              <th class="border-left">Individual</th>
+              <th>Family</th>
+              <th class="border-left">Individual</th>
+              <th>Family</th>
+              <th class="border-left">Individual</th>
+              <th>Family</th>
             </tr>
             <tr>
-              <td><input type="radio" name="selected" value=""></td>
+              <td><input type="radio" name="selected" value="choice-b"></td>
               <td>Choice B</td>
-              <td>450</td>
+              <td class="border-left">450</td>
               <td>1200</td>
-              <td>3000</td>
+              <td class="border-left">3000</td>
               <td>5200</td>
-              <td>498/1104</td>
+              <td class="border-left">498/1104</td>
               <td>1005/1678</td>
             </tr>
             <tr>
-              <td><input type="radio" name="selected" value=""></td>
+              <td><input type="radio" name="selected" value="choice-c"></td>
               <td>Choice C</td>
-              <td>1500</td>
+              <td class="border-left">1500</td>
               <td>5200</td>
-              <td>3200</td>
+              <td class="border-left">3200</td>
               <td>5200</td>
-              <td>413/1002</td>
+              <td class="border-left">413/1002</td>
               <td>1215/1545</td>
             </tr>
         </table>
-        <button type="button" name="button">Make Selection</button>
+        <p>Made your selection? Click the button to complete the enrollment process!</p>
+        <button type="button" name="plan-select">Complete Enrollment</button>
       </div>
 </form>
 </div>

@@ -143,7 +143,8 @@ li li {margin:.5rem 0;}
 }
 
 #dependentsLabel{
-  width:80%;
+  width: 415px;
+  padding-top:30px;
 }
 
 .radio-label{
@@ -164,9 +165,19 @@ li li {margin:.5rem 0;}
 }
 #questionform .question{
   counter-increment: question-counter;
+  margin:2rem 0 1rem;
 }
 #questionform .question:before{
-  content:counter(question-counter)'.  ';
+  content:counter(question-counter);
+  display:block;
+  color:#fff;
+  background-color:#3950a2;
+  border-radius:50%;
+  text-align:center;
+  height:22px;
+  width:22px;
+  float:left;
+  margin-right:10px;
 }
 
 #questionform .form-item input{
@@ -180,11 +191,23 @@ li li {margin:.5rem 0;}
 .font-b {font-weight:600;}
 
 #plans table{
-width:100%;
-border-bottom:1px solid #ddd;
-
+  width:100%;
+  border-collapse: collapse;
+  border:1px solid #cccccc;
 }
-#plans table tr td{
-  border-top:1px solid #ddd;
-  padding:10px 0 10px 0;
+#plans table tr:nth-child(odd){
+  background:#eee;
+}
+#plans table tr:first-child {
+  background:#fff;
+}
+
+.border-left {border-left:1px solid #cccccc;}
+.subheadings th {font-weight:600;font-size:.85rem}
+#plans table td {
+  padding:10px 0;
+}
+
+#plans table th {
+  padding:5px 0;
 }
